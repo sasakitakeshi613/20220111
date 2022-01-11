@@ -1,0 +1,22 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //縦に並んだ候補者の名簿が与えらえるので、候補者を同じ順に横に (すなわち 1 行に) 
+        //半角スペース区切りで並べて出力してください。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String[] words = new String[num];
+        
+        for(int i=0; i<num; i++){
+            words[i] = sc.next();
+            if(i == num-1){
+                System.out.print(words[i]);
+                break;
+            } else {
+                System.out.print(words[i] + " ");
+            }
+        }
+    }
+}
