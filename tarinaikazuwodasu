@@ -1,0 +1,17 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは 1, 2, 3, 4, 5 の数字の書かれた 5種類のカードを集めています。
+        //4 枚目まで集まり、残り 1 枚で全て揃うというところでカードが混ざってしまいました。
+        //4 枚のカードの情報が改行区切りで入力されるので、 1 から 5 のカードのうち足りないカードの数字を出力してください。
+        Scanner sc = new Scanner(System.in);
+        int[] numbers = new int[4];
+        
+        for(int i=0; i<4; i++){
+            numbers[i] = sc.nextInt();
+        }
+        System.out.println(15 - (numbers[0] + numbers[1] + numbers[2] + numbers[3]));
+    }
+}
