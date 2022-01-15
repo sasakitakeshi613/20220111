@@ -1,0 +1,94 @@
+<?php
+    //5行5列の五目並べの盤面が与えられます。
+    //盤面の各マスには、"O"か"X"か"."が書かれています。
+    //"O"と"X"は、それぞれプレイヤーの記号を表します。
+    //同じ記号が縦か横か斜めに連続で5つ並んでいれば、その記号のプレイヤーが勝者となります。
+    //勝者の記号を1行で表示してください。
+    //勝者がいない場合は、引き分けとして、"D"を表示してください。
+    $board = [];
+    
+    for($i = 0; $i < 5; $i++){
+        $board[$i] = trim(fgets(STDIN));
+        if($board[$i] == "OOOOO"){
+            echo "O";
+            return;
+        } else if($board[$i] == "XXXXX"){
+            echo "X";
+            return;
+        }
+    }
+    
+    $countO = 0;
+    $countX = 0;
+    
+    for($i = 0; $i < 5; $i++){
+        if($board[$i][$i] == "O"){
+            $countO ++;
+        } else if($board[$i][$i] == "X"){
+            $countX ++;
+        }
+    }
+    
+    $revO = 0;
+    $revX = 0;
+    
+    for($i = 0; $i < 5; $i++){
+        if($board[$i][4 - $i] == "O"){
+            $revO ++;
+        } else if($board[$i][4 - $i] == "X"){
+            $revX ++;
+        }
+    }
+    
+    if($countX == 5){
+        echo "X";
+        return;
+    } else if($countO == 5){
+        echo "O";
+        return;
+    } 
+    
+    if($revO == 5){
+        echo "O";
+        return;
+    } else if($revX == 5){
+        echo "X";
+        return;
+    }
+    
+    
+    if($board[0][0] == "O" && $board[1][0] == "O" && $board[2][0] == "O" && $board[3][0] == "O" && $board[4][0] == "O"){
+        echo "O";
+        return;
+    } else if($board[0][1] == "O" && $board[1][1] == "O" && $board[2][1] == "O" && $board[3][1] == "O" && $board[4][1] == "O"){
+        echo "O";
+        return;
+    } else if($board[0][2] == "O" && $board[1][2] == "O" && $board[2][2] == "O" && $board[3][2] == "O" && $board[4][2] == "O"){
+        echo "O";
+        return;
+    } else if($board[0][3] == "O" && $board[1][3] == "O" && $board[2][3] == "O" && $board[3][3] == "O" && $board[4][3] == "O"){
+        echo "O";
+        return;
+    } else if($board[0][4] == "O" && $board[1][4] == "O" && $board[2][4] == "O" && $board[3][4] == "O" && $board[4][4] == "O"){
+        echo "O";
+        return;
+    } else if($board[0][0] == "X" && $board[1][0] == "X" && $board[2][0] == "X" && $board[3][0] == "X" && $board[4][0] == "X"){
+        echo "X";
+        return;
+    } else if($board[0][1] == "X" && $board[1][1] == "X" && $board[2][1] == "X" && $board[3][1] == "X" && $board[4][1] == "X"){
+        echo "X";
+        return;
+    } else if($board[0][2] == "X" && $board[1][2] == "X" && $board[2][2] == "X" && $board[3][2] == "X" && $board[4][2] == "X"){
+        echo "X";
+        return;
+    } else if($board[0][3] == "X" && $board[1][3] == "X" && $board[2][3] == "X" && $board[3][3] == "X" && $board[4][3] == "X"){
+        echo "X";
+        return;
+    } else if($board[0][4] == "X" && $board[1][4] == "X" && $board[2][4] == "X" && $board[3][4] == "X" && $board[4][4] == "X"){
+        echo "X";
+        return;
+    } 
+    
+    echo "D";
+    return;
+?>
