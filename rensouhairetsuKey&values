@@ -1,0 +1,22 @@
+<?php
+    //次のような「ユーザー」と「ユーザーに対応する血液型」を連想配列（辞書）として定義して、
+    //それらのキーと値のペアを順に出力してください。
+    //ユーザー	ユーザーに対応する血液型
+    //Kyoko	B	
+    //Rio	O	
+    //Tsubame	AB	
+    //KurodaSensei	A	
+    //NekoSensei	A	
+    $array = array('Kyoko'=>'B', 'Rio'=>'O', 'Tsubame'=>'AB', 'KurodaSensei'=>'A', 'NekoSensei'=>'A');
+    
+    $key = array_keys($array);
+    $name = [];
+    
+    for($i=0; $i<5; $i++){
+        $name[$i] = $key[$i];
+    }
+    
+    for($i=0; $i<5; $i++){
+        echo $name[$i]." ".$array[$name[$i]]."\n";   
+    }
+?>
