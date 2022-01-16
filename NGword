@@ -1,0 +1,20 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは禁止ワードが含まれるかどうかを判定するプログラムを作成しています。
+        //禁止ワード W と判定する文字列 S が改行区切りで順に与えられるので S に W が含まれている時は
+        //"NG" それ以外の場合は文字列 S をそのまま出力してください。
+
+        Scanner sc = new Scanner(System.in);
+        String ng = sc.next();
+        String check = sc.next();
+        
+        if(check.contains(ng)){
+            System.out.println("NG");   
+        } else {
+            System.out.println(check);
+        }
+    }
+}
