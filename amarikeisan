@@ -1,0 +1,20 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //ティッシュ1箱が空になるまでの期間を M 日、残りの花粉症の季節を N 日が改行区切りで入力されるので、
+        //花粉症の季節が終わるまでに必要なティッシュ箱の数を求めて下さい。
+        Scanner sc = new Scanner(System.in);
+        int day = sc.nextInt();
+        int rest = sc.nextInt();
+        int nes = rest/day;
+        int amari = rest%day;
+        
+        if(amari == 0){
+            System.out.println(nes);   
+        } else {
+            System.out.println(nes + 1);
+        }
+    }
+}
