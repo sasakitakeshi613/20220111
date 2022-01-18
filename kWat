@@ -1,0 +1,12 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //1 時間 1 キロワットで 25 円かかるとします。
+        //n キロワットの電気を連続して使ったとき、 24 時間でいくらの料金になるか出力してください。
+        Scanner sc = new Scanner(System.in);
+        int kWat = sc.nextInt();
+        System.out.println(kWat * 25 * 24);
+    }
+}
