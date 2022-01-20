@@ -1,0 +1,28 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはパソコンにある大量のデータをバックアップするために、外部記憶装置を購入しようとしています。
+        //バックアップをしたいデータの容量 X GB(ギガバイト)
+        //外部記憶装置 1 つあたりの容量 Y GB
+        //外部記憶装置 1 つあたりの価格 P 円
+        //がそれぞれ与えられるので全てのデータをバックアップするために何円必要か計算するプログラムを作成してください。
+        //例えば入力例 1 では
+        //バックアップしたいデータ容量が 10 GBで、 外部記憶装置 1 つあたりの容量が 3 GBなので 
+        //4 つの外部記憶装置で全てのデータがバックアップできます。
+        //外部記憶装置 1 つあたりの価格が 10000 円なので 40000 円が必要となります。
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int price = sc.nextInt();
+        int num = x/y;
+        int rest = x%y;
+        
+        if(rest == 0){
+            System.out.println(num * price);   
+        } else {
+            System.out.println((num +1)*price);
+        }
+    }
+}
