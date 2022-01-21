@@ -1,0 +1,15 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //正の整数 N が標準入力から入力されるので、N 個の「*」を繋げた文字列を出力するプログラムを作成しましょう。
+        //例えば N = 3の場合
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        
+        for(int i=0; i<num; i++){
+            System.out.print("*");   
+        }
+    }
+}
