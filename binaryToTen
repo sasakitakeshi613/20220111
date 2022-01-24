@@ -1,0 +1,36 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは学校で 2 進数表記について学習したので、2 進数表記の数字を 10 進数に直すプログラムを作成しようと思っています。
+        //5 桁からなる 2 進数表記の数が与えられるので、10 進数に直して出力するプログラムを作成してください。
+        //例えば、入力例 1 では 2 進数表記で 01011 なので、
+        //10 進数表記は 0 × 2^4 + 1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 11 より 11 を出力します。
+        //2^0 = 1 であることに注意してください。
+        Scanner sc = new Scanner(System.in);
+        String two = sc.next();
+        int ten = 0;
+        
+        if(two.substring(0,1).equals("1")){
+            ten += 16;
+        } 
+        
+        if(two.substring(1,2).equals("1")){
+            ten += 8;
+        } 
+        
+        if(two.substring(2,3).equals("1")){
+            ten += 4;
+        } 
+        
+        if(two.substring(3,4).equals("1")){
+            ten += 2;
+        } 
+        
+        if(two.substring(4,5).equals("1")){
+            ten += 1;
+        } 
+        System.out.println(ten);
+    }
+}
