@@ -1,0 +1,35 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはソースコードを読んでいる時に区切り文字として「_」(アンダースコア)と
+        //「-」(ハイフン)が混在している文字列の存在に気が付きました。
+        //そこで「_」か「-」どちらか一方に統一するため以下のルールで変換することにしました。
+        //・「_」と「-」のうち数が多い方に統一
+        //・もし同数の場合は「_」に統一
+        Scanner sc = new Scanner(System.in);
+        String line = sc.next();
+        
+        int score = 0;
+        int hyphen = 0;
+        
+        String[] ary = line.split("");
+        
+        for(int i=0; i<ary.length; i++){
+            if("_".equals(ary[i])){
+                score ++;
+            } else if("-".equals(ary[i])){
+                hyphen ++;
+            }
+        }
+        
+        if(score > hyphen){
+            line = line.replaceAll("[-]","_");
+        } else {
+            line = line.replaceAll("[_]","-");
+        }
+        
+        System.out.println(line);
+    }
+}
