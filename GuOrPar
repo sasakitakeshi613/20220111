@@ -1,0 +1,35 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはあるイベントを主催していて、参加者の一人にゲストのサイン入りの本をプレゼントしようとしています。
+        //公平を期すため、じゃんけんでプレゼントする人を決めようとしていますが、数が多いため通常のじゃんけんでは決着がつきません。
+        //そこで、じゃんけんをして、最も同じ手の人が少なかった手を出した人をひとまず勝者とすることにしました。
+        //ただしこのじゃんけんでは、グーおよびパーしか出すことができません。
+        //勝った人はどちらの手を出していたか求めるプログラムを作成してください。
+        //ただし、どちらの手も出している人の数が同じ場合は引き分けとなります。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int gu = 0;
+        int par = 0;
+        String[] hand = new String[num];
+        
+        for(int i=0; i<num; i++){
+            hand[i] = sc.next();
+            if(hand[i].equals("G")){
+                gu ++;
+            } else if(hand[i].equals("P")){
+                par ++;
+            }
+        }
+        
+        if(gu > par){
+            System.out.println("P");   
+        } else if(gu < par){
+            System.out.println("G");
+        } else {
+            System.out.println("Draw");
+        }
+    }
+}
