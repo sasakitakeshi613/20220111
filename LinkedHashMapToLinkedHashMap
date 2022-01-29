@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //最初に「ユーザー」 U が1つ与えられます。
+        //続いて n 人の「ユーザー」と「ユーザーに対応する血液型」が与えられます。
+        //続いて m 種類の「血液型」と「血液型に対応する占い結果」が与えられます。
+        //与えられたユーザー U に対応する占い結果を表示してください。
+        Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+        int nameNum = sc.nextInt();
+        LinkedHashMap<String, String> map1 = new LinkedHashMap<>();
+        
+        for(int i=0; i<nameNum; i++){
+            map1.put(sc.next(), sc.next());
+        }
+        
+        int secondNum = sc.nextInt();
+        LinkedHashMap<String, String> map2 = new LinkedHashMap<>();
+        
+        for(int i=0; i<secondNum; i++){
+            map2.put(sc.next(), sc.next());
+        }
+        String name2 = map1.get(name);
+        
+        System.out.println(map2.get(name2));
+    }
+}
