@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //1 行目には、並木道に並ぶ木の本数を表す整数 N、何本おきに電飾を施すかを表す整数 X、
+        //一本の木に電飾を施す際に必要になる電球の個数を表す整数 Y が半角スペース区切りで与えられます。
+        //端の木には必ず電飾を施すこととしたとき、並木道の木の本数、一本あたりの装飾に必要な電球の数、
+        //何本ごとに電飾を施すかが与えられるので必要な電球の数を計算するプログラムを作成してください。
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int X = sc.nextInt();
+        int Y = sc.nextInt();
+        int need = N%X;
+        int num = N/X;
+        
+        if(need == 0){
+           System.out.println(num * Y);
+        } else {
+            System.out.println((num + 1) * Y);
+        }
+    }
+}
