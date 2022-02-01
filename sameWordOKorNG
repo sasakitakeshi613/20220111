@@ -1,0 +1,31 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはパスワードを入力させるプログラムを作成しています。
+        //単純なパスワード入力を防ぐために手始めに 
+        //全ての文字が同じ パスワードであった場合に警告を出すことにしました。
+        Scanner sc = new Scanner(System.in);
+        String line = sc.next();
+        String[] word = new String[line.length()];
+        String one = line.substring(0,1);
+        int count = 0;
+        
+        for(int i=0; i<line.length(); i++){
+            word[i] = line.substring(i,i+1);
+        }
+        
+        for(int i=0; i<line.length(); i++){
+            if(word[i].equals(one)){
+                count ++;
+            }
+        }
+        
+        if(count == line.length()){
+            System.out.println("NG");   
+        } else {
+            System.out.println("OK");
+        }
+    }
+}
