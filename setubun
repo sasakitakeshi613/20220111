@@ -1,0 +1,17 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //節分では年齢と同じ数だけの豆を食べる風習がありあなたはその用意をしています。
+        //n 人の子どもたちの年齢が改行区切りで与えられるので合計で何個の豆を用意すればいいか出力してください。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int count = 0;
+        for(int i=0; i<num; i++){
+            count += sc.nextInt();
+        }
+        
+        System.out.println(count);
+    }
+}
