@@ -1,0 +1,22 @@
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    $hit = trim(fgets(STDIN));
+    $num = trim(fgets(STDIN));
+    $nameBlood = [];
+    
+    for($i = 0; $i < $num; $i++){
+        [$name, $blood] = explode(" ", trim(fgets(STDIN)));
+        $nameBlood[$name] = $blood;
+    }
+
+    $num2 = trim(fgets(STDIN));
+    $wordColor = [];
+    
+    for($i = 0; $i < $num2; $i++){
+        [$word, $color] = explode(" ", trim(fgets(STDIN)));
+        $wordColor[$word] = $color;
+    }
+    
+    echo $wordColor[$nameBlood[$hit]];
+?>
