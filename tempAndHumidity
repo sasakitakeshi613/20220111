@@ -1,0 +1,21 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //気温が 25 ℃以上の日、もしくは湿度が 40 % 以下の日は干します。それ以外の日は干しません。
+        //ただし、上記の干す条件を満たす日のうち、気温が 25 ℃以上かつ、湿度 40 % 以下の日は砂ぼこりが舞うので干しません。
+        //例えば、気温が 30 ℃で湿度が 60 % の日は温かいので干しますが、同じ気温で湿度が 20 % の日は砂ぼこりが舞うので干しません。
+        Scanner sc = new Scanner(System.in);
+        int temp = sc.nextInt();
+        int humidity = sc.nextInt();
+        
+        if(temp >= 25 && humidity <= 40){
+            System.out.println("No");   
+        } else if(temp >= 25 && humidity >= 40){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
