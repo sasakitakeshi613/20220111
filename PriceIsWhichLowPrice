@@ -1,0 +1,26 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは2社の通信販売サイトの価格比較をしています。
+        //価格、送料がスペース区切りで各社1行ずつ改行区切りで与えられるので価格と送料の合計が安い方の合計価格を出力してください。
+        //価格、送料の合計が同じ場合はどちらの合計を出力しても問題ない点に注意してください。
+        Scanner sc = new Scanner(System.in);
+        int price1 = sc.nextInt();
+        int price2 = sc.nextInt();
+        int one = price1 + price2;
+        
+        int price3 = sc.nextInt();
+        int price4 = sc.nextInt();
+        int two = price3 + price4;
+        
+        if(two == one){
+            System.out.println(one);   
+        } else if(two > one){
+            System.out.println(one);
+        } else {
+            System.out.println(two);
+        }
+    }
+}
