@@ -1,0 +1,33 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはお花見の準備のためにレジャーシートを買うことにしました。
+        //レジャーシートの質に興味のないあなたは最も面積あたりの価格の安いレジャーシートを探すため、
+        //プログラムを書くことにしました。
+        //2つのレジャーシートの横の長さ x, 縦の長さ y, 価格 p が スペース区切りで与えられます。
+        //最も面積あたりの価格の安いレジャーシートの x, y ,p をスペース区切りで出力するプログラムを作成してください。
+        //ただし、面積あたりの価格が同じ場合は "DRAW" と出力してください。
+        Scanner sc = new Scanner(System.in);
+        
+            float x = sc.nextFloat();
+            float y = sc.nextFloat();
+            float p = sc.nextFloat();
+            float x2 = sc.nextFloat();
+            float y2 = sc.nextFloat();
+            float p2 = sc.nextFloat();
+        
+        float one = p/(x*y);
+        float two = p2/(x2*y2);
+        
+        
+        if(one > two){
+            System.out.println((int)x2 +" " + (int)y2 +" " + (int)p2);   
+        } else if(one < two){
+            System.out.println((int)x +" " + (int)y +" " + (int)p);
+        } else {
+            System.out.println("DRAW");
+        }
+    }
+}
