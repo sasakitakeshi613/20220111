@@ -1,0 +1,31 @@
+<?php
+    //「ユーザー」と「ユーザーに対応する血液型」、「血液型」と「血液型に対応する占い結果」が与えられます。
+    //それぞれのユーザーに対応する占い結果を表示してください。
+    //入力例の1つ目は、ユーザーの血液型についてのラッキーカラーの占いです。
+    //入力例の2つ目は、ユーザーの星座についてのラッキーパーソンの占いになっています。
+    //「血液型」として「星座」などのさまざまな文字列を利用できるようにすることで、
+    //他の占いにも対応する必要があることに注意してください。
+    $firstNum = trim(fgets(STDIN));
+    $nameBlood = [];
+    
+    for($i=0; $i<$firstNum; $i++){
+        [$name,$blood] = explode(" ",trim(fgets(STDIN)));
+        $nameBlood[$name] =$blood;
+        //echo $name."\n";
+    }
+    
+    $secondNum = trim(fgets(STDIN));
+    $bloodColor = [];
+    
+    for($i=0; $i<$secondNum; $i++){
+        [$blood, $color] =  explode(" ",trim(fgets(STDIN)));
+        $bloodColor[$blood] = $color;
+    }
+    
+    $key = array_keys($nameBlood);
+    
+    for($i=0; $i<$firstNum; $i++){
+        echo $key[$i]." ".$bloodColor[$nameBlood[$key[$i]]]."\n";
+        
+    }
+?>
