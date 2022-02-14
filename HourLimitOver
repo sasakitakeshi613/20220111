@@ -1,0 +1,17 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //時刻のうち n 時の部分が日をまたいで 25 時となってしまった場合は
+        //1 時とするように 0 時から 23 時までの 24 時間表記として正しい数値に修正するプログラムを作成してください。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        
+        if(num > 24){
+            System.out.println(num - 24);  
+        } else {
+            System.out.println(num);
+        }
+    }
+}
