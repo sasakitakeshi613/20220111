@@ -1,0 +1,27 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは初日の出を見るために早く起きる計画を立てています。
+        //しっかりと寝て初日の出に備えたいあなたは 8 時間寝ることに決めました。
+        //初日の出を見るために出発する時間が与えられるので寝る時間を出力して下さい。
+        //入力例 1 では 5時25分が以下のように与えられるので
+        Scanner sc = new Scanner(System.in);
+        String startTime = sc.next();
+        
+        if(startTime.length() == 4){
+            int hour = Integer.parseInt(startTime.substring(0,1));
+            int afterH = hour + 16;
+            String neoH = String.valueOf(afterH);
+            String four = neoH + startTime.substring(1,4);
+            System.out.println(four);
+        } else if(startTime.length() == 5){
+            int hour = Integer.parseInt(startTime.substring(0,2));
+            int afterH = hour - 8 ;
+            String neoH = String.valueOf(afterH);
+            String five = neoH + startTime.substring(2,5);
+            System.out.println(five);
+        }
+    }
+}
