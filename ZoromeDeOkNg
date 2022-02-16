@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //11 月 11 日が迫るある日、あなたはゾロ目の日付を判定するプログラムを作成することにしました。
+        //ゾロ目の日とはある日付に対して 月 と 日 に含まれる全ての桁の数字が同じものを指します。
+        //スペース区切りで月と日が与えられるのでゾロ目の日であれば "Yes" そうでなければ "No" と出力してください。
+        Scanner sc = new Scanner(System.in);
+        String line = sc.nextLine();
+        String num = line.replaceAll(" ","");
+        String[] word = new String[num.length()];
+        String one = num.substring(0,1);
+        int count = 0;
+        
+        for(int i=0; i<num.length(); i++){
+            word[i] = num.substring(i,i+1);
+            if(one.equals(word[i])){
+                count ++;
+            }
+        }
+        
+        if(count == num.length()){
+            System.out.println("Yes");   
+        } else {
+            System.out.println("No");
+        }
+    }
+}
