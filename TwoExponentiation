@@ -1,0 +1,28 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //1 月 1 日から 2 の 8 乗の 256 日目にあたる 9 月 13 日(うるう年では 9 月 12 日)は
+        //ロシアではプログラマーの日とされています。
+        //あなたはプログラマーの日まで 2 の n 乗日目の区切りを調べたくなりました。
+        //1 月 1 日から何日目か x が与えられるので 2 の n 乗日目であれば「OK」そうでない場合は「NG」と出力してください。
+        Scanner sc = new Scanner(System.in);
+        int day = sc.nextInt();
+        int[] num = {2, 4, 8, 16, 32, 64, 128, 256};
+        int count = 0;
+        
+        for(int i=0; i < 8; i++){
+            //System.out.println(num[i]);
+            if(day == num[i]){
+                count ++;
+            }
+        }
+        
+        if(count > 0){
+            System.out.println("OK");   
+        } else {
+            System.out.println("NG");
+        }
+    }
+}
