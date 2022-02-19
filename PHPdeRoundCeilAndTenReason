@@ -1,0 +1,20 @@
+//【 10 倍する理由 】
+//コンピュータ内部では小数を完全に表現することができません。
+//そのため、小数演算を繰り返すことで、誤差が発生することが多々あります。
+//そこで、今回入力される小数の条件は小数点以下 1 桁の小数だということに注目して、小数を 10 倍することで、小数演算を回避します。
+
+<?php
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
+    [$num, $need] =explode(" ", trim(fgets(STDIN)));
+    $countExp = [];
+    $count = 0;
+    
+    for($i=0; $i<$num; $i++){
+        $countExp[$i] = trim(fgets(STDIN));
+        $count += round($countExp[$i]*10);
+        //echo $count."\n";
+    }
+    
+     echo ceil(($count)/($need*10));
+?>
