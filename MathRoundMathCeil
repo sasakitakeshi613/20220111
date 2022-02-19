@@ -1,0 +1,24 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたはゲームでの経験値を計算するプログラムを作成することになりました。
+        //ゲームのキャラクターはそれぞれ必要な経験値量が決まっています。
+        //経験値は必ず 1 回の戦闘で同じ量が取得できます。取得した経験値は各キャラに振り分けることができます。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        double need = sc.nextDouble();
+        double[] exp = new double[num];
+        double needCount = 0;
+        
+        for(int i=0; i<num; i++){
+            exp[i] = sc.nextDouble();
+            //System.out.println(exp[i]);
+            needCount += exp[i];
+        }
+        System.out.println((int)Math.ceil((Math.round(needCount*10))/(need*10)));
+        
+        //System.out.println((int)Math.ceil(needCount/need));
+    }
+}
