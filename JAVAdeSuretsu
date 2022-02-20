@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //長さ n の 2 つの数列 A = {a_1, a_2, ..., a_n}, B = {b_1, b_2, ..., b_n} が与えられます。
+        //数列の差 C = {b_1-a_1, b_2-a_2, ..., b_n-a_n} を求めてください。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int[] one = new int[num];
+        int[] two = new int[num];
+        
+        for(int i=0; i < num; i++){
+            one[i] = sc.nextInt();
+        }
+        
+        for(int i=0; i < num; i++){
+            two[i] = sc.nextInt();
+        }
+        
+        for(int i=0; i < num; i++){
+            if(i == (num - 1)){
+                System.out.print(two[i] - one[i]);
+            } else {
+                System.out.print(two[i] - one[i]+" ");   
+            }
+        }
+    }
+}
