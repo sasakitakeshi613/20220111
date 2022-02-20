@@ -1,0 +1,15 @@
+<?php
+    //長さ n の 2 つの数列 A = {a_1, a_2, ..., a_n}, B = {b_1, b_2, ..., b_n} が与えられます。
+    //数列の差 C = {b_1-a_1, b_2-a_2, ..., b_n-a_n} を求めてください。
+    $num = trim(fgets(STDIN));
+    $one = explode(" ", trim(fgets(STDIN)));
+    $two = explode(" ", trim(fgets(STDIN)));
+    
+    for($i =0; $i < $num; $i++){
+        if($i == ($num -1)){
+            echo $two[$i] - $one[$i];
+        } else {
+            echo $two[$i] - $one[$i]." ";
+        }
+    }
+?>
