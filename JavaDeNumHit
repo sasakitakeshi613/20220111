@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //数列 A = {a_1, a_2, ..., a_n} と、整数 x が与えられます。
+        //整数 x が数列 A の何番目に現れているかを求めてください。つまり、x = a_i を満たす i を求めてください。
+        //なお、整数 x は必ず数列 A に 1 つだけ含まれていることが保証されます。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int[] number = new int[num];
+        for(int i=0; i<num; i++){
+            number[i] = sc.nextInt();
+        }
+        int hit = sc.nextInt();
+        
+        for(int i=0; i<num; i++){
+            if(hit == number[i]){
+                System.out.println(i+1);    
+            }
+        }
+    }
+}
