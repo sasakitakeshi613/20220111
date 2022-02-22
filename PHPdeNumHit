@@ -1,0 +1,15 @@
+<?php
+    //数列 A = {a_1, a_2, ..., a_n} と、整数 x が与えられます。
+    //整数 x が数列 A の何番目に現れているかを求めてください。つまり、x = a_i を満たす i を求めてください。
+    //なお、整数 x は必ず数列 A に 1 つだけ含まれていることが保証されます。
+    $num = trim(fgets(STDIN));
+    $number = explode(" ",trim(fgets(STDIN)));
+    
+    $hit = trim(fgets(STDIN));
+    
+    for($i=0; $i < $num; $i++){
+        if($hit == $number[$i]){
+            echo $i+1;
+        }
+    }
+?>
