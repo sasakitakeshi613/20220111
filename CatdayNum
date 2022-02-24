@@ -1,0 +1,12 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは猫の日が近いということで猫にちなんだプログラムを作成しています。
+        //ある正の整数 n が与えられるので加算すると 222 になる数字を出力してください。
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(222-n);
+    }
+}
