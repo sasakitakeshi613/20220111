@@ -1,0 +1,20 @@
+<?php
+    //m 本の相異なる長さ n の数列 A_1, A_2, ..., A_m と、長さ n の数列 X が与えられます。
+    //数列 X が A の何本目の数列と等しいかを求めてください。
+    //つまり、X_1 = A_i_1, X_2 = A_i_2, ..., X_n = A_i_n を満たす整数 i を求めてください。
+    //なお、数列 X は必ずある A_i と等しいことが保証されます。
+    [$num,$length] = explode(" ",trim(fgets(STDIN)));
+    $numbers = [];
+    
+    for($i = 0; $i < $num; $i++){
+        $numbers[$i] = trim(fgets(STDIN));
+    }
+    
+    $hit = trim(fgets(STDIN));
+    
+    for($i = 0; $i<$num; $i++){
+        if($hit == $numbers[$i]){
+            echo $i+1;
+        }
+    }
+?>
