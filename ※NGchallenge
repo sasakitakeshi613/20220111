@@ -1,0 +1,27 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //あなたは 2 台の車の燃費の良さの比較を行なっています。
+        //燃費は使った燃料を走った距離で割ったものとします。
+        //1 行目に 1 台目の車の走った距離 d_1 と使った燃料 f_1 がスペース区切りで、
+        //2 行目に 2 台目の車の走った距離 d_2 と使った燃料 f_2 がスペース区切りで入力されるので 
+        //1 台目の車の燃費のほうが良ければ 1 を 2 台目の車の燃費のほうが良ければ 2 を出力してください。
+        //全く同じ燃費の入力はないものとします。
+        Scanner sc = new Scanner(System.in);
+        int one = sc.nextInt();
+        int carOne = sc.nextInt();
+        int two = sc.nextInt();
+        int carTwo = sc.nextInt();
+        
+        int carAve1 = carOne/one;
+        int carAve2 = carTwo/two;
+        
+        if(carAve1 > carAve2){
+            System.out.println("1");   
+        } else {
+            System.out.println("2");
+        }
+    }
+}
