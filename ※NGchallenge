@@ -10,18 +10,18 @@ public class Main {
         //1 台目の車の燃費のほうが良ければ 1 を 2 台目の車の燃費のほうが良ければ 2 を出力してください。
         //全く同じ燃費の入力はないものとします。
         Scanner sc = new Scanner(System.in);
-        int one = sc.nextInt();
-        int carOne = sc.nextInt();
-        int two = sc.nextInt();
-        int carTwo = sc.nextInt();
+        float one = sc.nextFloat();
+        float carOne = sc.nextFloat();
+        float two = sc.nextFloat();
+        float carTwo = sc.nextFloat();
         
-        int carAve1 = carOne/one;
-        int carAve2 = carTwo/two;
+        float carAve1 = carOne/one;
+        float carAve2 = carTwo/two;
         
         if(carAve1 > carAve2){
-            System.out.println("1");   
+            System.out.println(1);   
         } else {
-            System.out.println("2");
+            System.out.println(2);
         }
     }
 }
