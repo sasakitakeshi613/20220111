@@ -1,0 +1,16 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //1 から 1,000 までの数値をすべて、半角スペース区切りで出力してください。
+        
+        for(int i=1; i<=1000; i++){
+            if(i == 1000){
+                System.out.print(i);
+            } else {
+                System.out.print(i + " ");   
+            }
+        }
+    }
+}
