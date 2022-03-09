@@ -1,0 +1,23 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //大きな数値Nが入力されます。 位の小さい方から 3 けたごとにカンマ区切りで出力してください。
+        //ただし、Nのけた数は 3 の倍数とは限りません。
+        Scanner sc = new Scanner(System.in);
+        String line = sc.next();
+        int linelength = line.length();
+        
+        //lineの長さを3で割った際の余りを求める
+        int three = line.length() % 3;
+        
+        for(int i=0; i<line.length(); i++){
+            if(i % 3 == three && i != 0){
+                System.out.print(",");    
+            }
+            //取得した文字列を1文字ずつ出したいなら　n.charAt(i)を行う
+            System.out.print(line.charAt(i));   
+        }
+    }
+}
