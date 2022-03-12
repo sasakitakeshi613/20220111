@@ -1,0 +1,15 @@
+<?php
+    //大きな数値Nが入力されます。 位の小さい方から 3 けたごとにカンマ区切りで出力してください。
+    //ただし、Nのけた数は 3 の倍数とは限りません。
+    $num = trim(fgets(STDIN));
+    $kanma = mb_strlen($num)%3;
+    
+    for($i=0; $i<mb_strlen($num); $i++){
+        if($i % 3 == $kanma && $i != 0){
+            echo ",";
+        }
+        echo $num[$i];
+    }
+    
+    
+?>
