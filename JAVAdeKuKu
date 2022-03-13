@@ -1,0 +1,26 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //自然数 N が入力されます。N 行 N 列の九九表を出力してください。
+        //具体的には、出力の i 行 j 列目 (1 ≦ i, j ≦ N ) の数値は i * j になるように出力してください。
+        //ただし、数値の間には半角スペースを、各行の末尾には、半角スペースの代わりに改行を入れてください。
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        
+        for(int i=1; i < num+1; i++){
+            //i と j があるとき j の中にあるものをi回おこなっている
+            for(int j = 1; j < num+1; j++){
+                System.out.print(i*j);
+                if(j < num){
+                    System.out.print(" ");
+                } else {
+                    //単に改行したいだけなら\nよりprintln()でもいい
+                    System.out.println();
+                }
+            }
+        }
+    }
+}
