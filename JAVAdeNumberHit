@@ -1,0 +1,25 @@
+import java.util.*;
+
+
+public class Main {
+    public static void main(String[] args) {
+        //長さ N の数列Aが与えられます。Aの中に 0 が含まれていない場合はYESを、
+        //0 が含まれている場合はNOを出力してください。
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int zero = 0;
+        
+        for(int i=0; i<num; i++){
+            int numHit = sc.nextInt();
+            if(numHit == 0){
+                zero ++;
+            }
+        }        
+        
+        if(zero > 0){
+            System.out.println("NO");
+        } else {
+            System.out.println("YES");
+        }
+    }
+}
